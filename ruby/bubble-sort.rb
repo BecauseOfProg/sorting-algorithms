@@ -10,9 +10,7 @@ def bubble_sort(t)
     (0..t.length - 2).each do |i|
       next unless t[i] > t[i + 1]
 
-      temp = t[i]
-      t[i] = t[i + 1]
-      t[i + 1] = temp
+      t[i], t[i + 1] = t[i + 1], t[i]
       ordered = false
     end
   end
